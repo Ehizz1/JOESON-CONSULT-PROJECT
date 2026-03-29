@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Joeson Consult</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+  <!-- Navigation bar -->
+  <div class="navbar">
+    <a href="index.html" id="dec">
+      <div class="logo">
+        <img src="./logo.png" alt="logo">
+        <div class="logo-text">
+         <h1>Joeson</h1>
+         <span>Consult Ltd</span>
+        </div>
+      </div>
+    </a>
+    <!-- Close button for mobile -->
+    <div class="close-menu-button">
+      <i class="fas fa-times"></i>
+    </div>
+   
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="./about.html">About</a>
+      <a href="#">Services</a>
+      <a href="contact.html">Contact</a>
+      <a href="http://wa.me/8063216925" class="btn-outline btn" style="padding: 8px 22px;">Book Consultation <i class="fas fa-calendar-alt"></i></a>
+    </div>
+     <div class="mobile-menu-button">
+      <i class="fas fa-bars"></i>
+    </div>
+  </div>
+
+    <!-- Google Map-->
+<div style="margin-top:40px;">
+  <a href="https://www.google.com/maps/dir/?api=1&destination=YOUR_OFFICE_ADDRESS" target="_blank">
+    <iframe 
+      src="https://www.google.com/maps?q=Nicon Luxury Area 11 &output=embed"
+      width="100%" 
+      height="300" 
+      style="border:0;" 
+      loading="lazy">
+    </iframe>
+  </a>
+</div>
+<section class="contact-section">
+  <div class="contact-container">
+
+    <!-- Left Side -->
+    <div class="contact-info">
+      <h2>Contact Us</h2>
+      <p><i class="fa-solid fa-location-dot"></i> Nicon Luxury, Area 11, Garki FCT Abuja, Nigeria</p>
+      <p><i class="fa-solid fa-phone"></i> +234 806 321 6925</p>
+      <p><i class="fa-solid fa-envelope"></i> info@joesonconsult.com.ng</p>
+    </div>
+
+    <!-- Right Side -->
+    <form class="contact-form" action="/contact" method="POST">
+      <input type="text" name="name" placeholder="Full Name" required>
+      <input type="email" name="email" placeholder="Email Address" required>
+      <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+
+  </div>
+</section>
+<script>
+const menuButton = document.querySelector('.mobile-menu-button');
+const navLinks = document.querySelector('.nav-links');
+const closeButton = document.querySelector('.close-menu-button');
+
+// OPEN NAVBAR
+menuButton.addEventListener('click', () => {
+  navLinks.classList.add('active');
+  menuButton.style.display = "none";
+  closeButton.style.display = "block";
+});
+
+// CLOSE NAVBAR
+closeButton.addEventListener('click', () => {
+  navLinks.classList.remove('active');
+  closeButton.style.display = "none";
+  menuButton.style.display = "block";
+});
+</script>
+
+
+
+</body>
+</html>
